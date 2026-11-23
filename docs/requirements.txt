@@ -1,0 +1,5 @@
+# Documentation build only. Model / PyTorch dependencies are intentionally absent.
+Sphinx==9.0.4
+sphinx-rtd-theme==3.1.0
+myst-parser==5.2.0
+sphinx-copybutton==0.5.2

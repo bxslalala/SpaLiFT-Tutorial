@@ -1,0 +1,26 @@
+# Synthetic CPU example.
+contexts:
+  - {slice: "a", modality: rna, path: ../data/demo/a_rna.h5ad}
+  - {slice: "a", modality: atac, path: ../data/demo/a_atac.h5ad}
+  - {slice: "b", modality: rna, path: ../data/demo/b_rna.h5ad}
+  - {slice: "b", modality: atac, path: ../data/demo/b_atac.h5ad}
+output_dir: ../outputs/demo
+device: cpu
+seed: 42
+latent_dim: 8
+hidden_dims: [32, 16]
+heads: 2
+batch_size: 4
+pair_chunk_size: 8
+epochs: 2
+steps_per_epoch: 5
+learning_rate: 0.001
+reverse_steps: 8
+validation_fraction: 0.2
+validation_batches: 1
+task_weights:
+  reconstruction: 1.0
+  masked: 1.0
+  cross_modal: 1.0
+  cross_slice: 1.0
+  multi_slice_multi_omics: 1.0

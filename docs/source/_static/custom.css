@@ -1,0 +1,24 @@
+/* Preserve the familiar Read the Docs layout. */
+.wy-nav-content { max-width: 980px; }
+.wy-side-nav-search { background-color: #2879a1; }
+.wy-menu-vertical p.caption { color: #64b4dd; }
+.rst-content p, .rst-content li { line-height: 1.65; }
+.rst-content .wy-table-responsive table td,
+.rst-content .wy-table-responsive table th { white-space: normal; }
+.rst-content .wy-table-responsive table { width: 100%; }
+.rst-content .highlight pre { font-size: 13px; line-height: 1.6; }
+.rst-content code.literal { overflow-wrap: anywhere; }
+.rst-content figure img { height: auto; }
+.rst-content .admonition p:last-child { margin-bottom: 0; }
+.wy-nav-content a:focus-visible, .wy-nav-side a:focus-visible,
+.wy-nav-side input:focus-visible, button:focus-visible {
+  outline: 3px solid #4c9dca; outline-offset: 3px;
+}
+@media (max-width: 768px) {
+  .wy-nav-content { padding: 1.5rem 1.25rem; }
+  .rst-content h1 { font-size: 1.8rem; overflow-wrap: anywhere; }
+  .rst-content .highlight pre { white-space: pre; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
+}

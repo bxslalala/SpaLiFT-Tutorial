@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="430" viewBox="0 0 620 430" role="img" aria-labelledby="title desc">
+  <title id="title">An illustrative SpaLiFT workflow</title>
+  <desc id="desc">RNA and ATAC gene-score profiles are encoded into a shared latent space. A target assay condition guides a decoder and score transport to predict target profiles. Spatial coordinates are retained for plotting and are not model inputs. All point patterns are illustrative.</desc>
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#E9EAF3" stroke-width=".65"/></pattern>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="m1 1 5 3-5 3" fill="none" stroke="#8387A4" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <g id="tissue">
+      <circle cx="0" cy="20" r="4.2"/><circle cx="11" cy="9" r="4.2"/><circle cx="22" cy="1" r="4.2"/><circle cx="34" cy="3" r="4.2"/><circle cx="45" cy="12" r="4.2"/><circle cx="57" cy="7" r="4.2"/><circle cx="69" cy="12" r="4.2"/><circle cx="80" cy="23" r="4.2"/>
+      <circle cx="4" cy="32" r="4.2"/><circle cx="15" cy="22" r="4.2"/><circle cx="27" cy="14" r="4.2"/><circle cx="39" cy="17" r="4.2"/><circle cx="51" cy="25" r="4.2"/><circle cx="63" cy="21" r="4.2"/><circle cx="75" cy="35" r="4.2"/>
+      <circle cx="9" cy="45" r="4.2"/><circle cx="21" cy="35" r="4.2"/><circle cx="33" cy="29" r="4.2"/><circle cx="45" cy="39" r="4.2"/><circle cx="58" cy="35" r="4.2"/><circle cx="68" cy="47" r="4.2"/>
+      <circle cx="20" cy="53" r="4.2"/><circle cx="32" cy="43" r="4.2"/><circle cx="43" cy="54" r="4.2"/><circle cx="55" cy="49" r="4.2"/>
+    </g>
+  </defs>
+  <rect width="620" height="430" rx="14" fill="#FCFCFF"/>
+  <rect x="0" y="57" width="620" height="373" fill="url(#grid)"/>
+  <path d="M0 57H620" stroke="#E2E4EF"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <circle cx="26" cy="28" r="4" fill="#5C50BB"/>
+    <text x="40" y="34" font-size="15" fill="#30334C" font-weight="600">Cross-assay translation</text>
+    <text x="593" y="33" font-size="11" fill="#85889D" text-anchor="end">MODEL OVERVIEW</text>
+
+    <rect x="28" y="81" width="157" height="104" rx="9" fill="#FFF8F6" stroke="#EEDBD5"/>
+    <circle cx="45" cy="100" r="3.5" fill="#D97661"/>
+    <text x="55" y="105" font-size="14" font-weight="600" fill="#9E4C3C">RNA</text>
+    <text x="171" y="105" font-size="11" fill="#AC7B6F" text-anchor="end">source</text>
+    <use href="#tissue" x="59" y="118" fill="#DC7C68"/>
+    <circle cx="110" cy="143" r="4.2" fill="#B65545"/><circle cx="98" cy="135" r="4.2" fill="#B65545"/><circle cx="104" cy="157" r="4.2" fill="#F1B3A5"/>
+
+    <rect x="28" y="208" width="157" height="104" rx="9" fill="#F3FAF8" stroke="#D2E8E2"/>
+    <circle cx="45" cy="227" r="3.5" fill="#3B9A8B"/>
+    <text x="55" y="232" font-size="14" font-weight="600" fill="#287B6E">ATAC</text>
+    <text x="171" y="232" font-size="11" fill="#6A988E" text-anchor="end">source</text>
+    <use href="#tissue" transform="translate(65 243) rotate(-8 40 25)" fill="#63AA9C"/>
+    <circle cx="113" cy="259" r="4.2" fill="#2F8375"/><circle cx="125" cy="268" r="4.2" fill="#2F8375"/>
+
+    <g fill="none" stroke="#8387A4" stroke-width="1.5" marker-end="url(#arrow)">
+      <path d="M185 138H204Q214 138 214 148V176H232"/>
+      <path d="M185 260H204Q214 260 214 250V191H232"/>
+    </g>
+    <rect x="235" y="151" width="116" height="65" rx="9" fill="#F0EDF9" stroke="#D5CFEA"/>
+    <text x="293" y="179" font-size="15" font-weight="600" fill="#51439A" text-anchor="middle">Shared</text>
+    <text x="293" y="199" font-size="15" font-weight="600" fill="#51439A" text-anchor="middle">encoder</text>
+    <text x="293" y="238" font-size="11" fill="#8A879E" text-anchor="middle">feature profiles</text>
+    <path d="M352 183H395" fill="none" stroke="#8387A4" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <rect x="404" y="81" width="188" height="162" rx="9" fill="#F8F7FD" stroke="#DCD7EF"/>
+    <text x="420" y="105" font-size="14" font-weight="600" fill="#51439A">Shared latent space</text>
+    <text x="576" y="106" font-size="15" font-style="italic" fill="#7A6DB5" text-anchor="end">z</text>
+    <path d="M424 221V123M424 221H577" fill="none" stroke="#E1DDEF"/>
+    <g fill="#DC7C68">
+      <circle cx="453" cy="154" r="4"/><circle cx="461" cy="146" r="3.7"/><circle cx="466" cy="158" r="4"/><circle cx="450" cy="166" r="3.3"/><circle cx="473" cy="150" r="3.5"/><circle cx="476" cy="163" r="3.5"/>
+      <circle cx="529" cy="149" r="4"/><circle cx="539" cy="155" r="3.5"/><circle cx="543" cy="143" r="3.5"/><circle cx="536" cy="136" r="3.5"/>
+      <circle cx="500" cy="194" r="4"/><circle cx="509" cy="200" r="3.5"/><circle cx="516" cy="191" r="3.5"/><circle cx="497" cy="205" r="3.2"/>
+    </g>
+    <g fill="#4E9D8E">
+      <circle cx="457" cy="159" r="3.7"/><circle cx="469" cy="141" r="3.4"/><circle cx="477" cy="155" r="3.7"/><circle cx="462" cy="171" r="3.3"/>
+      <circle cx="532" cy="146" r="3.5"/><circle cx="545" cy="153" r="3.7"/><circle cx="547" cy="134" r="3.5"/><circle cx="522" cy="139" r="3.2"/>
+      <circle cx="505" cy="187" r="3.5"/><circle cx="510" cy="209" r="3.5"/><circle cx="490" cy="196" r="3.4"/><circle cx="520" cy="202" r="3.2"/>
+    </g>
+    <path d="M498 243V261" fill="none" stroke="#8387A4" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <rect x="404" y="266" width="188" height="62" rx="8" fill="#ECE8F7" stroke="#D5CFEA"/>
+    <text x="498" y="291" font-size="14" font-weight="600" fill="#51439A" text-anchor="middle">Conditional generation</text>
+    <text x="498" y="311" font-size="12" fill="#7769A5" text-anchor="middle">decoder + score transport</text>
+    <text x="291" y="289" font-size="12" fill="#73738E" text-anchor="middle">Target context</text>
+    <rect x="252" y="299" width="78" height="24" rx="12" fill="#F3FAF8" stroke="#CFE4DE"/>
+    <text x="291" y="315" font-size="11" fill="#327E71" text-anchor="middle">condition</text>
+    <path d="M336 299H394" fill="none" stroke="#8387A4" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <path d="M498 328V345" fill="none" stroke="#8387A4" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <rect x="278" y="350" width="314" height="47" rx="8" fill="#F3FAF8" stroke="#D2E8E2"/>
+    <text x="294" y="379" font-size="14" font-weight="600" fill="#287B6E">Predicted target profile</text>
+    <g fill="#5A9D90"><rect x="489" y="372" width="6" height="12" rx="1"/><rect x="499" y="362" width="6" height="22" rx="1"/><rect x="509" y="368" width="6" height="16" rx="1"/><rect x="519" y="375" width="6" height="9" rx="1"/><rect x="529" y="360" width="6" height="24" rx="1"/><rect x="539" y="366" width="6" height="18" rx="1"/><rect x="549" y="371" width="6" height="13" rx="1"/><rect x="559" y="365" width="6" height="19" rx="1"/><rect x="569" y="375" width="6" height="9" rx="1"/></g>
+
+    <text x="29" y="344" font-size="12" font-weight="600" fill="#73738E">Spatial coordinates</text>
+    <text x="29" y="362" font-size="11" fill="#85889D">retained for plotting,</text>
+    <text x="29" y="379" font-size="11" fill="#85889D">not encoder inputs</text>
+    <text x="29" y="413" font-size="10" fill="#9295A8">Illustrative point patterns; no experimental results shown.</text>
+  </g>
+</svg>
